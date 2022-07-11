@@ -286,7 +286,7 @@ def runner(n):
 		# load our serialized model from disk
 		net = cv2.dnn.readNetFromCaffe(args["prototxt"], args["model"])
 
-		name = threading.current_Thread().getName()
+		name = threading.current_thread().name
 		# if a video path was not supplied, grab a reference to the ip camera
 		if not args.get("input", False):
 			print("[INFO] Starting the stream..")
