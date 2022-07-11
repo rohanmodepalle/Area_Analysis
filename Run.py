@@ -506,7 +506,6 @@ else:
         x = len(first_line)
         first_l = []
         second_l = []
-        print(x)
         if x > 0:
             first_line[0] = first_line[0].replace("\n","")
             first_line[0] = first_line[0].replace("[","")
@@ -524,7 +523,8 @@ else:
         plt.plot(first_l,second_l,label=str(i))
         plt.xlabel('Number of people')
         plt.ylabel('Average time')
-        plt.legend()							
+        plt.legend()	
+    plt.title('Area Analysis chart')						
     plt.show()
 
         
