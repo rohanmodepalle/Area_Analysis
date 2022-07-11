@@ -59,6 +59,7 @@ schedule.every().day.at("9:00").do(run)
 - Graphs all the data after every run.
 - Useful for analysing different areas of the store in the same graph.
 - Total number of people in that area and the average time the people spend there can be clearly seen.
+- Once all the video streams end, we can see the graph.
 
 ***3. Threshold Time:***
 - Threshold time is the time in seconds that the person has to be in the frame to be counted.
