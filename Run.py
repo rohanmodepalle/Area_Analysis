@@ -11,6 +11,7 @@ import argparse, imutils
 import time, dlib, cv2, datetime
 import numpy as np
 import threading
+import os
 
 def run():
 	try: 
@@ -530,7 +531,6 @@ else:
         plt.legend()	
     plt.title('Area Analysis chart')						
     plt.show()
-
-        
+      
         
         
