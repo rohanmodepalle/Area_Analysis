@@ -89,7 +89,6 @@ def run():
 		# loop over frames from the video stream
 		while rval:
 			# next frame
-			frame = frame[1]
 			rval, frame = vs.read()
 
 			# end of the video
