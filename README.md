@@ -40,17 +40,6 @@ pip install -r requirements.txt
 
 url = ''
 ```
-
-- Setup your camera url in 'mylib/config.py':
-
-```
-# Enter the ip camera url (e.g., url = 'rtsp://codonsoft:rohanchowdary@192.168.0.131:554/stream1')
-url = ''
-```
-- Then run with the command:
-```
-python manage.py
-```
 > Set url = 0 for webcam.
 
 ## Features
@@ -66,10 +55,16 @@ python manage.py
 schedule.every().day.at("9:00").do(run)
 ```
 
-***2. Simple log:***
-- Logs all data during every run.
-- Useful for footfall analysis.
-- All the details of every person going in, coming out, and remaining inside can be seen in the details.txt file
+***2. Simple analysis chart:***
+- Graphs all the data after every run.
+- Useful for analysing different areas of the store in the same graph.
+- Total number of people in that area and the average time the people spend there can be clearly seen.
+
+***3. Threshold Time:***
+- Threshold time is the time in seconds that the person has to be in the frame to be counted.
+- This is useful in a business scenario, for instance, you can set it to be 5 seconds.
+- Set Threshold Time = 5 in mylib/config.py file to use this feature.
+- This is because it is not correct to count people who are crossing people from one side to another as people who spend time in that area.
 
 ## References
 - SSD paper: https://arxiv.org/abs/1512.02325
