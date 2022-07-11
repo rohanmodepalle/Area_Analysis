@@ -77,7 +77,6 @@ schedule.every().day.at("9:00").do(run)
 - MobileNet paper: https://arxiv.org/abs/1704.04861
 - Centroid tracker: https://www.pyimagesearch.com/2018/07/23/simple-object-tracking-with-opencv/
 - https://towardsdatascience.com/review-ssd-single-shot-detector-object-detection-851a94607d11
-- https://pypi.org/project/schedule/
 
 ## Limitations
 - Train the SSD on human data only with a top-down view for good accuracy.
