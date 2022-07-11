@@ -157,9 +157,8 @@ def run():
 			#delete all entries of testing
 			testing.clear()
 			for (objectID, centroid) in objects.items():
-				
 				testing.append(objectID)
-				# check to see if a trackable object exists for the current object ID
+				# check to see if person is in the list of tracked objects
 				if tested[objectID] == 0:
 					t = time.localtime()
 					#timer1[object] = t
@@ -175,7 +174,6 @@ def run():
 					to = TrackableObject(objectID, centroid)
 				# but if it exists
 				else:
-					# check in which direction the object is moving, then
 					y = [c[1] for c in to.centroids]
 					to.centroids.append(centroid)
 
@@ -451,8 +449,6 @@ def runner(n):
 
 			# show the output frame without minimising the window whith name of current thread
 			cv2.imshow(name, frame)
-			#dont minimise frame
-			#cv2.setWindowProperty("CodonSoft People Tracker", cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_FULLSCREEN)
 			key = cv2.waitKey(1) & 0xFF
 
 			# if the `q` key was pressed, break from the loop
