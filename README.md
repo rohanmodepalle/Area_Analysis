@@ -66,6 +66,11 @@ schedule.every().day.at("9:00").do(run)
 - Set Threshold Time = 5 in mylib/config.py file to use this feature.
 - This is because it is not correct to count people who are crossing people from one side to another as people who spend time in that area.
 
+***4. Multithreading:***
+- Multithreading is used to speed up the software.
+- Each thread is responsible for a specific area of the store.
+- Each thread can be stopped individually without affecting the others.
+
 ## References
 - SSD paper: https://arxiv.org/abs/1512.02325
 - MobileNet paper: https://arxiv.org/abs/1704.04861
