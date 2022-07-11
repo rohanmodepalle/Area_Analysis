@@ -69,7 +69,7 @@ schedule.every().day.at("9:00").do(run)
 ***4. Multithreading:***
 - Multithreading is used to speed up the software.
 - Each thread is responsible for a specific area of the store.
-- Each thread can be stopped individually without affecting the others.
+- Each thread can be stopped individually without affecting the others by pressing 'q' with that particular video stream selected..
 
 ## References
 - SSD paper: https://arxiv.org/abs/1512.02325
