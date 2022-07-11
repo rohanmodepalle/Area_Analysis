@@ -14,6 +14,7 @@ import threading
 
 def run():
 	try: 
+
 		# construct the argument parse and parse the arguments
 		testing = []
 		time_in = []
@@ -53,8 +54,9 @@ def run():
 
 		# load our serialized model from disk
 		net = cv2.dnn.readNetFromCaffe(args["prototxt"], args["model"])
+		name = threading.current_thread().name
+		#print(name)
 
-		name = threading.currentThread().getName()
 		# if a video path was not supplied, grab a reference to the ip camera
 		if not args.get("input", False):
 			print("[INFO] Starting the stream..")
@@ -86,6 +88,7 @@ def run():
 		# loop over frames from the video stream
 		while rval:
 			# next frame
+			frame = frame[1]
 			rval, frame = vs.read()
 
 			# end of the video
@@ -282,7 +285,7 @@ def runner(n):
 		# load our serialized model from disk
 		net = cv2.dnn.readNetFromCaffe(args["prototxt"], args["model"])
 
-		name = threading.currentThread().getName()
+		name = threading.current_Thread().getName()
 		# if a video path was not supplied, grab a reference to the ip camera
 		if not args.get("input", False):
 			print("[INFO] Starting the stream..")
@@ -495,6 +498,7 @@ else:
     for thread in threading.enumerate():
         if thread.name != "MainThread":
             thread.join()
+
     for i in config.url:
         # open file i.txt where i is the variable
         i_temp = str(i).replace("/","")
