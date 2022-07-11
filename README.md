@@ -34,17 +34,13 @@ Area analysis for large areas using live video stream/IP camera in OpenCV.
 ```
 pip install -r requirements.txt
 ```
-- To run inference on a test video file:
-- Setup path of your test video in the main.py file
+- To run inference on video files or IP cameras:
 ```
-# Enter the path of your video at the end of the line. For example:
-os.system("python Run.py --prototxt mobilenet_ssd/MobileNetSSD_deploy.prototxt --model mobilenet_ssd/MobileNetSSD_deploy.caffemodel --input videos/example_01.mp4")
+# Enter the video file path or IP camera url in the url list of 'mylib/config.py' (eg., url = 'rtsp://username:password@IP_address:port/stream','videos/example_01.mp4')
+
+url = ''
 ```
-- Then run with the command: 
-```
-python main.py
-```
-- To run inference on an IP camera:
+
 - Setup your camera url in 'mylib/config.py':
 
 ```
