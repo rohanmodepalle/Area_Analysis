@@ -1,12 +1,10 @@
-# PeopleCounter in Real Time
-People Counting in Real-Time using live video stream/IP camera in OpenCV.
-
-> This is an improvement/modification to https://www.pyimagesearch.com/2018/08/13/opencv-people-counter/ which i have developed for CodonSoft 
+# Area Analysis for large areas
+Area analysis for large areas using live video stream/IP camera in OpenCV.
 
 - The major goal is to leverage the project as a ready-to-scale business model.
-- Use case: real-time counting of people in stores, buildings, shopping malls, and other locations.
+- Use case: real-time analysis of different sections of a large area like supermarkets.
 - Improving performance by automating features and optimising the real-time stream.
-- Also serves as a countermeasure to COVID-19 by allowing for footfall analysis.
+- Also serves as a very useful tool for shopowners to analyse the products in the store by checking how the demand is distributed.
 
 --- 
 
